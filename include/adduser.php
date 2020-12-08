@@ -7,8 +7,10 @@
     $gameIDremove = $_POST['removegame'];
 
     // add new user
+    if ($userName != "") {
     $adduser = "INSERT INTO user (userID, userName, userGameCount) VALUES ('$userID', '$userName', '0')";
     mysqli_query($sql, $adduser);
+    }
    
     //update user name only if input not empty
     //would also run if adding new user but no change
